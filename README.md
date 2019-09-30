@@ -1,2 +1,0 @@
-# tilify
-Created with CodeSandbox
