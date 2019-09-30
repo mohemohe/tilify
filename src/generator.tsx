@@ -22,8 +22,8 @@ const styles = {
     display: "flex",
     paddingLeft: "0.5rem",
     width: "100%",
-    boxSizing: "border-box",
-    flexWrap: "wrap"
+    boxSizing: "border-box" as any,
+    flexWrap: "wrap" as any
   },
   paper: {
     margin: "0 0.5rem 0.5rem 0",
