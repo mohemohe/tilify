@@ -20,7 +20,10 @@ export interface Img {
 const styles = {
   root: {
     display: "flex",
-    paddingLeft: "0.5rem"
+    paddingLeft: "0.5rem",
+    width: "100%",
+    boxSizing: "border-box" as any,
+    flexWrap: "wrap" as any
   },
   paper: {
     margin: "0 0.5rem 0.5rem 0",
@@ -65,8 +68,8 @@ export default class Generator extends React.Component<IProps, IState> {
             />
           </Paper>
         </div>
-        <div>
-          <Paper style={styles.paper}>
+        <div style={{ display: "flex" }}>
+          <Paper style={{ ...styles.paper, minWidth: 320 }}>
             <Typography variant="h5" component="h3">
               画像
             </Typography>
@@ -174,6 +177,8 @@ export default class Generator extends React.Component<IProps, IState> {
               </div>
             ))}
           </Paper>
+        </div>
+        <div>
           <Paper
             style={{
               padding: 0,
@@ -183,7 +188,11 @@ export default class Generator extends React.Component<IProps, IState> {
               width: "fit-content"
             }}
           >
-            <Tile canvasComponentRef={this.canvasComponentRef} backgroundColor={this.state.backgroundColor} images={this.state.images} />
+            {this.state.images.length > 0 ? (
+              <Tile canvasComponentRef={this.canvasComponentRef} backgroundColor={this.state.backgroundColor} images={this.state.images} />
+            ) : (
+              <div style={{ width: 512, height: 512 }} />
+            )}
           </Paper>
           <Button
             variant="contained"

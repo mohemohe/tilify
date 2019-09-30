@@ -1,5 +1,5 @@
 # tifily
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ffe6da3e-7092-4fe3-9102-524248ee9b08/deploy-status)](https://app.netlify.com/sites/csb-mirmd/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/76e8e25b-e4ac-4741-b8f5-2c57f7ac14da/deploy-status)](https://app.netlify.com/sites/csb-vhc6x/deploys)
 
-https://csb-mirmd.netlify.com/
+https://csb-vhc6x.netlify.com
