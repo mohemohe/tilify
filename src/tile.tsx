@@ -35,7 +35,7 @@ export default class Tile extends React.Component<IProps, IState> {
         height={canvasHeight}
         updateCanvas={(context: CanvasRenderingContext2D) => {
           context.clearRect(0, 0, canvasWidth, canvasHeight);
-          context.fillStyle = `rgba(${backgroundColor.r}, ${backgroundColor.g}, ${backgroundColor.b}, ${backgroundColor.a || 1})`;
+          context.fillStyle = `rgba(${backgroundColor.r}, ${backgroundColor.g}, ${backgroundColor.b}, ${backgroundColor.a || 0})`;
           context.fillRect(0, 0, canvasWidth, canvasHeight);
           images.forEach(({ image }, index) => {
             var img = new Image();
